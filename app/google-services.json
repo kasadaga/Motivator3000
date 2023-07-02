@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "674365367376",
+    "firebase_url": "https://motivator3000-77dbf-default-rtdb.firebaseio.com",
+    "project_id": "motivator3000-77dbf",
+    "storage_bucket": "motivator3000-77dbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674365367376:android:1477d66d39a60317a59d55",
+        "android_client_info": {
+          "package_name": "com.example.motivator3000"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMF-9OacPfCNzhid5Pmpb9l5lODCZG22c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
