@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(edName.getText().toString().matches("")){
+                    Toast.makeText(v.getContext(),"Для продолжения введите имя!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(currentUser == null)
                 {
                     mAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                                 else
                                 {
-                                    //Toast.makeText(this,"Пустое поле", Toast.LENGTH_SHORT);
+                                    //Toast.makeText(v.getContext(),"Для продолжения введите имя!", Toast.LENGTH_SHORT).show();
                                 }
 
                                 Intent intent = new Intent(MainActivity.this, ReadActivity.class);
