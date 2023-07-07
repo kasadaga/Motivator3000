@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,7 +37,7 @@ public class ReadActivity extends AppCompatActivity{
     private String USER_KEY = "users";
     public String userId;
     private int count;
-
+    private Toolbar mToolbar;
     MediaPlayer mPlayer;
 
     @Override
@@ -42,6 +45,8 @@ public class ReadActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.read_layout);
         init();
+        mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
     }
 
     private void init()
@@ -150,5 +155,24 @@ public class ReadActivity extends AppCompatActivity{
         Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
             //deprecated in API 26
             v.vibrate(200);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_read, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        /*
+        int id = item.getItemId();
+        switch (id){
+            case R.id.newGame:
+                Toast.makeText(this, "New game", Toast.LENGTH_SHORT).show();
+                break;
+        }
+         */
+        return true;
     }
 }
