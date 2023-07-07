@@ -88,7 +88,7 @@ public class ReadActivity extends AppCompatActivity{
     @Override
     protected void onStart() {
         super.onStart();
-        //load_Param_from_Firebase();
+        load_Param_from_Firebase();
     }
 
     private void load_Param_from_Firebase() {

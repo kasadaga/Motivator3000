@@ -93,9 +93,12 @@ public class MainActivity extends AppCompatActivity {
                     //Уже зарегистрирован currentUser.getUid()
                     String userId = currentUser.getUid();
                     String name = edName.getText().toString();
+
+                    /*
                     int count = 0;
 
                     User newUser = new User(userId, name, count);
+
 
                     if(!TextUtils.isEmpty(name))
                     {
@@ -107,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         //Toast.makeText(this,"Пустое поле", Toast.LENGTH_SHORT);
                     }
-
+                    */
                     Intent intent = new Intent(MainActivity.this, ReadActivity.class);
                     intent.putExtra("userId", userId);
                     startActivity(intent);
